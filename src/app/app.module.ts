@@ -10,6 +10,7 @@ import { HeaderComponent } from './modules/dashboard/component/header/header.com
 import { FooterComponent } from './modules/dashboard/component/footer/footer.component';
 import { AboutComponent } from './modules/dashboard/component/about/about.component';
 import { MainComponent } from './modules/dashboard/component/main/main.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { MainComponent } from './modules/dashboard/component/main/main.component
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

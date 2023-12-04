@@ -1,1 +1,60 @@
-<p>signup works!</p>
+<div class="container">
+    <div class="parent-box">
+          <div class="form-box">
+              <div class="form-heading d-flex justify-content-center">
+                <h1>signup</h1>
+              </div>
+              <div class="signup-form">
+                <form [formGroup]="signupForm">
+                  <div class="form-row">
+                    <div class="col-sm-12 col-md-12 col-lg-12  mt-2">
+                      <label>Name</label>
+                      <input class="form-control" placeholder="Enter Your Name" name="userName"
+                      formControlName="userName">
+                      <div *ngIf="userName?.invalid && (userName?.dirty || userName?.touched)"
+                      class="alert alert-danger">
+                       <div *ngIf="userName?.errors?.['required']">Name is required.</div>
+                   </div>
+                    </div>
+                    <div class="col-sm-12 col-md-12 col-lg-12  mt-2">
+                      <label>Email</label>
+                      <input class="form-control" placeholder="Enter Your Email" name="userEmail"
+                   formControlName="userEmail">
+                   <div *ngIf="userEmail?.invalid && (userEmail?.dirty || userEmail?.touched)"
+                      class="alert alert-danger">
+                      <div *ngIf="userEmail?.errors?.['required']">Email is required.</div>
+                    </div>
+                    </div>
+                    <div class="col-sm-12 col-md-12 col-lg-12  mt-2">
+                        <label>Password</label>
+                        <input class="form-control" placeholder="Enter Your Password" name="userPassword"
+                         formControlName="userPassword">
+                         <div *ngIf="userPassword?.invalid && (userPassword?.dirty || userPassword?.touched)"
+                      class="alert alert-danger">
+                     <div *ngIf="userPassword?.errors?.['required']">Password is required.</div>
+                     <div *ngIf="userPassword?.errors?.['minlength']"> Password must be at least 5 characters long.</div>
+                    </div>
+                      </div>
+                      <div class="col-sm-12 col-md-12 col-lg-12  mt-2">
+                        <label>Re Password</label>
+                        <input class="form-control" placeholder="Re Enter Your Password" name="userRepassword"
+                        formControlName="userRepassword">
+                        <div *ngIf="userRepassword?.invalid && (userRepassword?.dirty || userRepassword?.touched)"
+                              class="alert alert-danger">
+                            <div *ngIf="userRepassword?.errors?.['required']">Password is required.</div>
+                            <div *ngIf="userRepassword?.errors?.['minlength']"> Password must be at least 5 characters long.</div>
+                        </div>
+                      </div>
+                  </div>
+                  <div class="d-flex justify-content-end mt-2">
+                    <button class="btn btn-primary" (click)="submit()">Signup</button>
+                  </div>
+                </form>      
+              </div>
+              <div class="form-footerd-flex justify-content-between">
+                <h6><a routerLink="#">forgetpassword?</a></h6>
+                <h6><a routerLink="/login">login</a></h6>
+              </div>
+          </div>
+    </div>
+  </div>
