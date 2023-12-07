@@ -4,7 +4,6 @@ import { MainComponent } from '../component/main/main.component';
 import { AboutComponent } from '../component/about/about.component';
 
 const routes: Routes = [
-  {path:'dashboard',component:MainComponent},
   {path:'about',component:AboutComponent}
 ];
 

@@ -19,11 +19,11 @@
                   <div class="col-sm-12 col-md-12 col-lg-12  mt-2">
                     <label>Password</label>
                     <input class="form-control" type="password" placeholder="Enter Your Password" 
-                    name="email"  formControlName="userPassword"   minlength="4">
+                    name="email"  formControlName="userPassword"  >
                     <div *ngIf="userPassword?.invalid && (userPassword?.dirty || userPassword?.touched)"
                       class="alert alert-danger">
                      <div *ngIf="userPassword?.errors?.['required']">Password is required.</div>
-                     <div *ngIf="userPassword?.errors?.['minlength']"> Password must be at least 5 characters long.</div>
+                     <!-- <div *ngIf="userPassword?.errors?.['minlength']"> Password must be at least 5 characters long.</div> -->
                     </div>
                   </div>    
                 </div>

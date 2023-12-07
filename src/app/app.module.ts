@@ -11,6 +11,10 @@ import { FooterComponent } from './modules/dashboard/component/footer/footer.com
 import { AboutComponent } from './modules/dashboard/component/about/about.component';
 import { MainComponent } from './modules/dashboard/component/main/main.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import {  HttpClientModule } from '@angular/common/http';
+import { ToastrModule } from 'ngx-toastr';
+
+
 
 @NgModule({
   declarations: [
@@ -26,7 +30,9 @@ import { ReactiveFormsModule } from '@angular/forms';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HttpClientModule,
+    ToastrModule.forRoot(),
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,0 +1,25 @@
+{
+  "login":[{
+    "id":1,
+    "userEmail":"admin@gmail.com",
+    "userPassword":"admin"
+  }],
+  "signup": [
+    {
+      "userName": "admin",
+      "userEmail": "admin@gmail.com",
+      "userPassword": "admin",
+      "userRePassword": "admin",
+      "isActive": "true",
+      "id": 1
+    },
+    {
+      "userName": "mike",
+      "userEmail": "tennison@gmail.com",
+      "userPassword": "1234",
+      "userRepassword": "1234",
+      "isActive": true,
+      "id": 2
+    }
+  ]
+}
